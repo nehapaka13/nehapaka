@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neha Paka | Software Engineer</title>
+    <meta name="description" content="Professional portfolio of Neha Paka, Firmware and Embedded Systems Developer specializing in C/C++, microcontrollers, and IoT solutions.">
+    <link rel="icon" type="image/x-icon" href="np.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">NP</div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            <div class="theme-switcher">
+                <div class="theme-icons">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="theme-toggle-ball"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text animate__animated animate__fadeInLeft">
+                        <h1 class="hero-title">Neha Paka</h1>
+                        <h2 class="hero-subtitle">Firmware & Embedded Systems Developer</h2>
+                        <p class="hero-description">Building efficient, reliable embedded systems with expertise in C/C++, microcontrollers, and IoT communication protocols.</p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="cta-button primary">View Projects</a>
+                            <a href="#contact" class="cta-button secondary">Contact Me</a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/nehapaka" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.github.com/nehapaka13" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="https://leetcode.com/u/nehapaka13" target="_blank" class="social-link"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-image animate__animated animate__fadeInRight">
+                        <div class="hardware-snippet">
+                            <pre><code class="language-c">// Embedded Systems Expertise
+void optimize_firmware() {
+    configure_uart(BAUD_115200);
+    init_watchdog_timer();
+    enable_low_power_mode();
+    
+    while(1) {
+        process_sensor_data();
+        transmit_via_mqtt();
+        sleep_until_interrupt();
+    }
+}</code></pre>
+                            <div class="hardware-icons">
+                                <i class="fas fa-microchip"></i>
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-robot"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <p class="section-subtitle">Tools and technologies I work with</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3 class="skill-title">Embedded Programming</h3>
+                        <ul class="skill-list">
+                            <li>C/C++/Embedded C</li>
+                            <li>Real-Time Systems</li>
+                            <li>Interrupt Handling</li>
+                            <li>FreeRTOS</li>
+                            <li>Bare-metal Programming</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                        <h3 class="skill-title">Microcontrollers</h3>
+                        <ul class="skill-list">
+                            <li>ARM Cortex-M</li>
+                            <li>ESP32</li>
+                            <li>Raspberry Pi</li>
+                            <li>Renesas</li>
+                            <li>Arduino</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="skill-title">Communication Protocols</h3>
+                        <ul class="skill-list">
+                            <li>UART/SPI/I2C</li>
+                            <li>CAN/Zigbee</li>
+                            <li>MQTT/Modbus</li>
+                            <li>TCP/IP</li>
+                            <li>Wirepas Mesh</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                        <h3 class="skill-title">Tools & Debugging</h3>
+                        <ul class="skill-list">
+                            <li>JTAG Debugging</li>
+                            <li>Logic Analyzer</li>
+                            <li>PySerial</li>
+                            <li>Git/Docker</li>
+                            <li>Shell Scripting</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fab fa-linux"></i></div>
+                        <h3 class="skill-title">Embedded Linux</h3>
+                        <ul class="skill-list">
+                            <li>Kernel Configuration</li>
+                            <li>Device Trees</li>
+                            <li>Driver Development</li>
+                            <li>System Optimization</li>
+                            <li>Yocto Project</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3 class="skill-title">UI & Integration</h3>
+                        <ul class="skill-list">
+                            <li>Embedded GUIs</li>
+                            <li>React.js</li>
+                            <li>Python Tkinter</li>
+                            <li>API Integration</li>
+                            <li>Performance Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-subtitle">My career journey</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Feb 2023 - Present</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Software Engineer</h3>
+                            <h4 class="timeline-company">Eficaa Ensmart Solutions Pvt Ltd, Hyderabad</h4>
+                            <ul class="timeline-description">
+                                <li>Optimized firmware in communication modules, cutting deployment time by 30%</li>
+                                <li>Refactored embedded Linux gateway systems, improving data throughput by 40%</li>
+                                <li>Developed Python-based tools (Tkinter) for real-time modem communication and diagnostics</li>
+                                <li>Implemented MQTT and UART protocols in embedded systems with 99.9% data reliability</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jun 2024 - Jan 2025</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Embedded UI Developer (Contract)</h3>
+                            <h4 class="timeline-company">Remote</h4>
+                            <ul class="timeline-description">
+                                <li>Designed lightweight, responsive GUIs for embedded interfaces using React.js</li>
+                                <li>Integrated APIs and ensured performance across constrained environments</li>
+                                <li>Improved usability and load times through code optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Aug 2021 - Jan 2022</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Intern - Publicity Team Lead</h3>
+                            <h4 class="timeline-company">College Radio Younify</h4>
+                            <ul class="timeline-description">
+                                <li>Led digital campaigns, creating multimedia content for campus radio events</li>
+                                <li>Boosted student engagement by 60% through strategic branding</li>
+                                <li>Coordinated with cross-functional teams on content creation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">My embedded systems work</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="imx8mp.png" alt="Embedded Gateway Optimization">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="Embedded Gateways with NXP.pdf" class="project-link">
+                                        <i class="fas fa-file-alt"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Embedded Gateway Optimization on NXP i.MX8M Plus</h3>
+                            <p class="project-description">
+                                Current working project involving firmware refinement and communication stack optimization in Linux-based gateways, achieving 40% improvement in throughput and latency reduction. Implemented Yocto-based BSP layer with phytec-qt5demo-image, Eclipse Linux IDE with Yocto toolchain, and comprehensive gateway protocols including Socket Programming and MQTT broker (Field Version).
+                            </p>
+                            <div class="project-tech">
+                                <span>Embedded Linux</span>
+                                <span>Yocto</span>
+                                <span>i.MX8M Plus</span>
+                                <span>Socket Programming</span>
+                                <span>MQTT</span>
+                                <span>C</span>
+                                <span>UART</span>
+                                <span>Optimization</span>
+                            </div>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Developed dynamic file storage system for Non-GPRS data with day-wise files in month/year folders</li>
+                                    <li>Implemented comprehensive system monitoring with alerts, LED indicators, and error code handling</li>
+                                    <li>Created DCU configuration commands for device management</li>
+                                    <li>Optimized gateway protocol stack for improved performance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="ESP32.png" alt="ESP32 Dynamic WiFi MQTT System">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="ESP32 WiFi and MQTT.pdf" class="project-link">
+                                        <i class="fas fa-file-alt"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">ESP32 - Dynamic WiFi + MQTT System</h3>
+                            <p class="project-description">
+                                Developed custom firmware for seamless WiFi network switching with uninterrupted MQTT communication, achieving near-zero downtime in data transmission. Implemented using Arduino IDE, WiFiManager library for hotspot configuration, and RabbitMQ broker integration on ESP32 WROOM 4MB module.
+                            </p>
+                            <div class="project-tech">
+                                <span>ESP32</span>
+                                <span>MQTT</span>
+                                <span>C++</span>
+                                <span>IoT</span>
+                                <span>WiFiManager</span>
+                                <span>RabbitMQ</span>
+                                <span>Arduino</span>
+                                <span>Network Optimization</span>
+                            </div>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Implemented dynamic WiFi switching with automatic network selection and seamless handover</li>
+                                    <li>Developed web-based configuration portal for network and MQTT broker setup</li>
+                                    <li>Achieved 99.98% connection uptime in multi-AP environments with average switch time of 1.2s</li>
+                                    <li>Optimized MQTT client with message queuing and automatic reconnection logic</li>
+                                    <li>Reduced power consumption to 8.5mA average current in connected state</li>
+                                    <li>Implemented local message buffering during network transitions to prevent data loss</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="Wirepas.png" alt="Wirepas Mesh Network">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="Wirepas 5G Mesh Network.pdf" class="project-link">
+                                        <i class="fas fa-file-alt"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Wirepas 5G Mesh Deployment</h3>
+                            <p class="project-description">
+                                Designed and deployed large-scale industrial IoT mesh network from scratch, including environment configuration, SDK customization, and network optimization. Achieved 99.9% packet delivery rate with 500+ nodes through routing optimization and stability validation under load.
+                            </p>
+                            <div class="project-tech">
+                                <span>Wirepas</span>
+                                <span>SPI</span>
+                                <span>Mesh Networking</span>
+                                <span>Docker</span>
+                                <span>OTAP</span>
+                                <span>NMS</span>
+                                <span>Industrial IoT</span>
+                                <span>5G</span>
+                            </div>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Configured complete development environment from scratch including SDK cloning</li>
+                                    <li>Implemented meter-specific code changes and communication schedules</li>
+                                    <li>Managed gateway Docker containers and recipe builds</li>
+                                    <li>Established OTAP and NMS systems for remote management</li>
+                                    <li>Optimized network join time by 40% through parameter tuning</li>
+                                    <li>Validated network stability with 500+ node test deployment</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="GUI.png" alt="Python GUI for Modem Diagnostics">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="GUI for Advanced Modem Diagnostics.pdf" class="project-link">
+                                        <i class="fas fa-file-alt"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Python GUI for Advanced Modem Diagnostics</h3>
+                            <p class="project-description">
+                                Developed comprehensive desktop application replicating commercial serial monitoring tools, providing real-time modem diagnostics over serial ports. Features include multi-format data viewing, automatic COM port detection, and configurable logging, significantly improving field debugging efficiency.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python</span>
+                                <span>Tkinter</span>
+                                <span>PySerial</span>
+                                <span>GUI Development</span>
+                                <span>Serial Communication</span>
+                                <span>Diagnostics</span>
+                                <span>Data Visualization</span>
+                                <span>Cross-Platform</span>
+                            </div>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Replicated 90% of Docklight functionality with open-source tools</li>
+                                    <li>Implemented real-time data display in multiple formats (ASCII/HEX/Decimal/Binary)</li>
+                                    <li>Developed automatic COM port detection with dynamic refresh</li>
+                                    <li>Created configurable logging system with multiple output formats</li>
+                                    <li>Designed intuitive UI with syntax highlighting and section organization</li>
+                                    <li>Optimized performance for handling high baud rate communications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">So, what’s your story?</p>
+                </div>
+                
+                <div class="contact-container">
+                    <form 
+                        class="contact-form" 
+                        id="contactForm"
+                        action="https://script.google.com/macros/s/AKfycbzACrMm4MZfWfNcZ6w6fLFa6GU4M6n7D-nchCkCyU87r3R2Hme0Djg-rGJ3pFLt0H94kQ/exec" 
+                        method="POST"
+                        target="hidden_iframe"
+                        >
+                        <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Typing..." rows="5" required></textarea>
+                        </div>
+                        <div id="statusMessage" style="display:none; color: green; margin-bottom: 10px;">Sending message...</div>
+                        <button type="submit" class="submit-button">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+
+
+                    
+                    
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>nehapaka13@gmail.com</span>
+                        </div><br>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hyderabad, India</span>
+                        </div><br>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/nehapaka" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.github.com/nehapaka13" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://leetcode.com/u/nehapaka13" target="_blank"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">&copy; <span id="year"></span> Neha Paka. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Update copyright year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <div id="toastBubble" style="
+        visibility: hidden;
+        min-width: 150px;
+        background-color: #118c05;
+        color: white;
+        text-align: center;
+        border-radius: 15px;
+        padding: 16px;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        font-size: 17px;
+        transform: translateX(100%);
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;">
+    </div>
+
+
+</body>
+</html>
