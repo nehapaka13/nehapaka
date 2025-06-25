@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neha Paka | Software Engineer</title>
+    <meta name="description" content="Professional portfolio of Neha Paka, Python Developer specializing in backend development, data analysis, and automation solutions.">
+    <link rel="icon" type="image/x-icon" href="np.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">NP</div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            <div class="theme-switcher">
+                <div class="theme-icons">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="theme-toggle-ball"></div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text animate__animated animate__fadeInLeft">
+                        <h1 class="hero-title">Neha Paka</h1>
+                        <h2 class="hero-subtitle">Python Developer</h2>
+                        <p class="hero-description">Building scalable, efficient applications with expertise in Python, Django, Flask, and data analysis. Passionate about clean code and automation.</p>
+                        <div class="hero-cta">
+                            <a href="#projects" class="cta-button primary">View Projects</a>
+                            <a href="#contact" class="cta-button secondary">Contact Me</a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/nehapaka" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.github.com/nehapaka13" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="https://leetcode.com/u/nehapaka13" target="_blank" class="social-link"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-image animate__animated animate__fadeInRight">
+                        <div class="hardware-snippet">
+                            <pre><code class="language-python"># Python Development Expertise
+def build_solution():
+    import pandas as pd
+    from flask import Flask, jsonify
+    
+    app = Flask(__name__)
+    
+    @app.route('/api/data')
+    def get_data():
+        df = pd.read_csv('dataset.csv')
+        return jsonify(df.to_dict())
+    
+    if __name__ == '__main__':
+        app.run(debug=True)</code></pre>
+                            <div class="hardware-icons">
+                                <i class="fab fa-python"></i>
+                                <i class="fas fa-database"></i>
+                                <i class="fas fa-server"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <p class="section-subtitle">Tools and technologies I work with</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fab fa-python"></i></div>
+                        <h3 class="skill-title">Python Development</h3>
+                        <ul class="skill-list">
+                            <li>Python 3.12</li>
+                            <li>Django</li>
+                            <li>RESTful APIs</li>
+                            <li>Asyncio</li>
+                            <li>Design Patterns</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <h3 class="skill-title">Data & Databases</h3>
+                        <ul class="skill-list">
+                            <li>Pandas, Numpy</li>
+                            <li>MySQL</li>
+                            <li>MongoDB</li>
+                            <li>SQLAlchemy</li>
+                            <li>Data Visualization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                        <h3 class="skill-title">Cloud & DevOps</h3>
+                        <ul class="skill-list">
+                            <li>AWS</li>
+                            <li>Docker</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Serverless</li>
+                            <li>Terraform</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                        <h3 class="skill-title">Tools & Testing</h3>
+                        <ul class="skill-list">
+                            <li>GitHub</li>
+                            <li>Pytest</li>
+                            <li>Jupyter Notebooks</li>
+                            <li>Postman</li>
+                            <li>Linux</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                        <h3 class="skill-title">Automation</h3>
+                        <ul class="skill-list">
+                            <li>Web Scraping</li>
+                            <li>Task Automation</li>
+                            <li>Bot Development</li>
+                            <li>Selenium</li>
+                            <li>Workflow Optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="skill-title">Data Science</h3>
+                        <ul class="skill-list">
+                            <li>Numpy</li>
+                            <li>Matplotlib</li>
+                            <li>Scikit-learn</li>
+                            <li>Data Cleaning</li>
+                            <li>Feature Engineering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-subtitle">My career journey</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Feb 2023 - Present</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Python Developer</h3>
+                            <h4 class="timeline-company">Eficaa Ensmart Solutions Pvt Ltd, Hyderabad</h4>
+                            <ul class="timeline-description">
+                                <li>Optimized Python-based systems achieving 40% faster performance (gateways, IoT, diagnostics)</li>
+                                <li>Improved data processing efficiency by 35% across all Python projects</li>
+                                <li>Automated 20+ hours/week of manual tasks with Python scripts</li>
+                                <li>Reduced deployment times by 50% through Python CI/CD pipelines</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">Aug 2021 - Jan 2022</div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Intern</h3>
+                            <h4 class="timeline-company">Tech Learn</h4>
+                            <ul class="timeline-description">
+                                <li>Developed web scraping tools that automated data collection processes</li>
+                                <li>Created educational content and tutorials for Python beginners</li>
+                                <li>Assisted in building a Flask-based learning management system</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">My Python development work</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="imx8mp.png" alt="Python-Optimized Embedded Gateway">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="Optimizing Embedded Gateways with Python on NXP.pdf" class="project-link">
+                                        <i class="fas fa-file-alt"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Python-Optimized Embedded Gateway on NXP i.MX8M Plus</h3>
+                            <p class="project-description">
+                                Developed a high-performance industrial IoT gateway using Python as the primary automation language, achieving 40% throughput improvement and 99.8% data reliability. Implemented Python-based communication protocols, data persistence, and real-time monitoring on Yocto Linux, reducing development time by 35% compared to traditional embedded approaches.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python 3</span>
+                                <span>Yocto Linux</span>
+                                <span>Paho-MQTT</span>
+                                <span>Socket Programming</span>
+                                <span>Data Persistence</span>
+                                <span>System Diagnostics</span>
+                                <span>CLI Tools</span>
+                                <span>Industrial IoT</span>
+                            </div>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Developed Python-based TCP socket communication layer with 99.2% packet delivery rate and automatic retry mechanism</li>
+                                    <li>Implemented MQTT integration (paho-mqtt) handling 500+ messages/sec with edge buffering during connectivity drops</li>
+                                    <li>Created dynamic data storage system organizing 10,000+ daily records into day/month/year folders with zero data loss</li>
+                                    <li>Built real-time monitoring system with Python GPIO control (LED indicators) and error handling for 15+ system events</li>
+                                    <li>Developed Python CLI configuration tool reducing DCU setup time from 30 minutes to <2 minutes per device</li>
+                                    <li>Automated protocol testing framework cutting validation time by 60% through Python scripts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="ESP32.png" alt="Python-Powered ESP32 IoT System">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="ESP32 WiFi and MQTT.pdf" class="project-link">
+                                        <i class="fas fa-file-alt"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">MicroPython IoT Communication System on ESP32</h3>
+                            <p class="project-description">
+                                Developed a robust IoT communication system using MicroPython on ESP32, achieving 99.98% connection uptime and 99.95% MQTT message reliability. Implemented dynamic WiFi switching, persistent MQTT communication, and power optimization in Python, reducing network transition time to just 1.2 seconds while maintaining ultra-low 8.5mA active power consumption.
+                            </p>
+                            <div class="project-tech">
+                                <span>MicroPython</span>
+                                <span>ESP32</span>
+                                <span>uMQTT</span>
+                                <span>WiFi Switching</span>
+                                <span>Web Configuration</span>
+                                <span>Power Optimization</span>
+                                <span>uasyncio</span>
+                                <span>IoT</span>
+                            </div>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Implemented dynamic WiFi switching with priority-based connection manager achieving 1.2s average switch time</li>
+                                    <li>Developed Python web configuration portal using socket module for WiFi/MQTT setup with JSON persistence</li>
+                                    <li>Built uMQTT client in Python with auto-reconnect, message queuing, and adaptive keep-alive (99.95% reliability)</li>
+                                    <li>Optimized power consumption to 8.5mA active current using Python deep sleep management</li>
+                                    <li>Created memory-efficient Python implementation fitting in 1.2MB firmware with 45KB runtime memory</li>
+                                    <li>Implemented Python-based state machine for seamless network transitions and MQTT session persistence</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="GUI.png" alt="Python-Powered Modem Diagnostics Tool">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="GUI for Advanced Modem Diagnostics.pdf" class="project-link">
+                                        <i class="fas fa-file-alt"></i> Case Study
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Advanced Modem Diagnostics Tool with Python</h3>
+                            <p class="project-description">
+                                Developed a professional-grade serial diagnostics application using Python 3.12 and Tkinter, matching commercial tool capabilities while adding enhanced features. The tool provides real-time UART monitoring, multi-format data visualization, and intelligent packet analysis - handling high-speed serial communication with zero data loss.
+                            </p>
+                            <div class="project-tech">
+                                <span>Python 3.12</span>
+                                <span>Tkinter</span>
+                                <span>PySerial</span>
+                                <span>Threading</span>
+                                <span>Data Transformation</span>
+                                <span>Regex Processing</span>
+                                <span>Custom Widgets</span>
+                                <span>Cross-Platform</span>
+                            </div>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Implemented threaded UART monitoring with PySerial handling 115200+ baud rates reliably</li>
+                                    <li>Developed real-time data display in 4 formats (ASCII/HEX/Decimal/Binary) with Python converters</li>
+                                    <li>Created auto-detection for COM ports using Python's serial.tools with dynamic refresh</li>
+                                    <li>Built custom Tkinter widgets with syntax highlighting and color-coded packet status indicators</li>
+                                    <li>Designed modular data transformation pipeline with Python regex filters for protocol analysis</li>
+                                    <li>Implemented persistent settings and theming using Python's json and os modules</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">So, what's your story?</p>
+                </div>
+                
+                <div class="contact-container">
+                    <form 
+                        class="contact-form" 
+                        id="contactForm"
+                        action="https://script.google.com/macros/s/AKfycbzACrMm4MZfWfNcZ6w6fLFa6GU4M6n7D-nchCkCyU87r3R2Hme0Djg-rGJ3pFLt0H94kQ/exec" 
+                        method="POST"
+                        target="hidden_iframe"
+                        >
+                        <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Typing..." rows="5" required></textarea>
+                        </div>
+                        <div id="statusMessage" style="display:none; color: green; margin-bottom: 10px;">Sending message...</div>
+                        <button type="submit" class="submit-button">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>nehapaka13@gmail.com</span>
+                        </div><br>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Hyderabad, India</span>
+                        </div><br>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/nehapaka" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.github.com/nehapaka13" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://leetcode.com/u/nehapaka13" target="_blank"><i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">&copy; <span id="year"></span> Neha Paka | All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Update copyright year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <div id="toastBubble" style="
+        visibility: hidden;
+        min-width: 150px;
+        background-color: #118c05;
+        color: white;
+        text-align: center;
+        border-radius: 15px;
+        padding: 16px;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        font-size: 17px;
+        transform: translateX(100%);
+        z-index: 9999;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;">
+    </div>
+</body>
+</html>
