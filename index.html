@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neha Paka | Software Engineer</title>
-    <meta name="description" content="Professional portfolio of Neha Paka, Python Developer specializing in backend development, data analysis, and automation solutions.">
+    <meta name="description" content="Professional portfolio of Neha Paka, Software Engineer specializing in Python, Web Development, and Embedded Systems.">
     <link rel="icon" type="image/x-icon" href="np.ico">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -45,7 +45,6 @@
         </div>
     </header>
 
-
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
@@ -54,8 +53,8 @@
                 <div class="hero-content">
                     <div class="hero-text animate__animated animate__fadeInLeft">
                         <h1 class="hero-title">Neha Paka</h1>
-                        <h2 class="hero-subtitle">Python Developer</h2>
-                        <p class="hero-description">Building scalable, efficient applications with expertise in Python, Django, Flask, and data analysis. Passionate about clean code and automation.</p>
+                        <h2 class="hero-subtitle">Software Engineer</h2>
+                        <p class="hero-description">Building scalable applications across web, embedded systems, and cloud platforms. Expertise in Python, JavaScript, and IoT development with a passion for clean architecture and performance optimization.</p>
                         <div class="hero-cta">
                             <a href="#projects" class="cta-button primary">View Projects</a>
                             <a href="#contact" class="cta-button secondary">Contact Me</a>
@@ -68,24 +67,33 @@
                     </div>
                     <div class="hero-image animate__animated animate__fadeInRight">
                         <div class="hardware-snippet">
-                            <pre><code class="language-python"># Python Development Expertise
+                            <pre><code class="language-python">#My Expertise
 def build_solution():
-    import pandas as pd
+    # Embedded Systems
+    from machine import Pin, I2C
+    import uasyncio as asyncio
+    
+    # Web Development
     from flask import Flask, jsonify
+    import react from 'react'
+    
+    # Data Processing
+    import pandas as pd
+    import tensorflow as tf
     
     app = Flask(__name__)
     
-    @app.route('/api/data')
-    def get_data():
-        df = pd.read_csv('dataset.csv')
-        return jsonify(df.to_dict())
+    @app.route('/api/iot-data')
+    def get_iot_data():
+        sensor_data = read_sensors()
+        return jsonify(process_data(sensor_data))
     
     if __name__ == '__main__':
-        app.run(debug=True)</code></pre>
+        app.run(host='0.0.0.0')</code></pre>
                             <div class="hardware-icons">
                                 <i class="fab fa-python"></i>
-                                <i class="fas fa-database"></i>
-                                <i class="fas fa-server"></i>
+                                <i class="fab fa-js"></i>
+                                <i class="fas fa-microchip"></i>
                             </div>
                         </div>
                     </div>
@@ -98,7 +106,7 @@ def build_solution():
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Technical Skills</h2>
-                    <p class="section-subtitle">Tools and technologies I work with</p>
+                    <p class="section-subtitle">Full-stack capabilities across multiple domains</p>
                 </div>
                 
                 <div class="skills-grid">
@@ -107,10 +115,34 @@ def build_solution():
                         <h3 class="skill-title">Python Development</h3>
                         <ul class="skill-list">
                             <li>Python 3.12</li>
-                            <li>Django</li>
-                            <li>RESTful APIs</li>
+                            <li>Django/Flask/FastAPI</li>
+                            <li>MicroPython</li>
                             <li>Asyncio</li>
-                            <li>Design Patterns</li>
+                            <li>Data Analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fab fa-js"></i></div>
+                        <h3 class="skill-title">Web Development</h3>
+                        <ul class="skill-list">
+                            <li>JavaScript/TypeScript</li>
+                            <li>React.js</li>
+                            <li>Node.js</li>
+                            <li>HTML5/CSS3</li>
+                            <li>REST/GraphQL</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                        <h3 class="skill-title">Embedded Systems</h3>
+                        <ul class="skill-list">
+                            <li>ESP32/STM32</li>
+                            <li>MicroPython</li>
+                            <li>IoT Protocols</li>
+                            <li>RTOS</li>
+                            <li>Hardware Debugging</li>
                         </ul>
                     </div>
                     
@@ -118,11 +150,11 @@ def build_solution():
                         <div class="skill-icon"><i class="fas fa-database"></i></div>
                         <h3 class="skill-title">Data & Databases</h3>
                         <ul class="skill-list">
-                            <li>Pandas, Numpy</li>
-                            <li>MySQL</li>
-                            <li>MongoDB</li>
-                            <li>SQLAlchemy</li>
+                            <li>SQL/NoSQL</li>
+                            <li>Pandas/Numpy</li>
                             <li>Data Visualization</li>
+                            <li>ETL Pipelines</li>
+                            <li>Time Series Data</li>
                         </ul>
                     </div>
                     
@@ -130,47 +162,23 @@ def build_solution():
                         <div class="skill-icon"><i class="fas fa-cloud"></i></div>
                         <h3 class="skill-title">Cloud & DevOps</h3>
                         <ul class="skill-list">
-                            <li>AWS</li>
-                            <li>Docker</li>
+                            <li>AWS/GCP</li>
+                            <li>Docker/Kubernetes</li>
                             <li>CI/CD Pipelines</li>
                             <li>Serverless</li>
-                            <li>Terraform</li>
+                            <li>Infrastructure as Code</li>
                         </ul>
                     </div>
                     
                     <div class="skill-category">
                         <div class="skill-icon"><i class="fas fa-tools"></i></div>
-                        <h3 class="skill-title">Tools & Testing</h3>
+                        <h3 class="skill-title">Tools & Methodologies</h3>
                         <ul class="skill-list">
-                            <li>GitHub</li>
-                            <li>Pytest</li>
-                            <li>Jupyter Notebooks</li>
-                            <li>Postman</li>
-                            <li>Linux</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <div class="skill-icon"><i class="fas fa-robot"></i></div>
-                        <h3 class="skill-title">Automation</h3>
-                        <ul class="skill-list">
-                            <li>Web Scraping</li>
-                            <li>Task Automation</li>
-                            <li>Bot Development</li>
-                            <li>Selenium</li>
-                            <li>Workflow Optimization</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3 class="skill-title">Data Science</h3>
-                        <ul class="skill-list">
-                            <li>Numpy</li>
-                            <li>Matplotlib</li>
-                            <li>Scikit-learn</li>
-                            <li>Data Cleaning</li>
-                            <li>Feature Engineering</li>
+                            <li>Git/GitHub</li>
+                            <li>Agile/Scrum</li>
+                            <li>Testing Frameworks</li>
+                            <li>Linux/Embedded Linux</li>
+                            <li>Performance Optimization</li>
                         </ul>
                     </div>
                 </div>
@@ -182,20 +190,20 @@ def build_solution():
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Professional Experience</h2>
-                    <p class="section-subtitle">My career journey</p>
+                    <p class="section-subtitle">My career journey across domains</p>
                 </div>
                 
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-date">Feb 2023 - Present</div>
                         <div class="timeline-content">
-                            <h3 class="timeline-title">Python Developer</h3>
+                            <h3 class="timeline-title">Software Engineer</h3>
                             <h4 class="timeline-company">Eficaa Ensmart Solutions Pvt Ltd, Hyderabad</h4>
                             <ul class="timeline-description">
-                                <li>Optimized Python-based systems achieving 40% faster performance (gateways, IoT, diagnostics)</li>
-                                <li>Improved data processing efficiency by 35% across all Python projects</li>
-                                <li>Automated 20+ hours/week of manual tasks with Python scripts</li>
-                                <li>Reduced deployment times by 50% through Python CI/CD pipelines</li>
+                                <li>Led development of IoT gateway solutions combining embedded Python with web interfaces</li>
+                                <li>Built full-stack applications with Python backend and React frontend for industrial monitoring</li>
+                                <li>Optimized embedded Python code achieving 40% performance improvement on NXP i.MX8M</li>
+                                <li>Developed CI/CD pipelines for both web applications and embedded firmware</li>
                             </ul>
                         </div>
                     </div>
@@ -203,12 +211,13 @@ def build_solution():
                     <div class="timeline-item">
                         <div class="timeline-date">Aug 2021 - Jan 2022</div>
                         <div class="timeline-content">
-                            <h3 class="timeline-title">Intern</h3>
+                            <h3 class="timeline-title">Web Development Intern</h3>
                             <h4 class="timeline-company">Tech Learn</h4>
                             <ul class="timeline-description">
-                                <li>Developed web scraping tools that automated data collection processes</li>
-                                <li>Created educational content and tutorials for Python beginners</li>
-                                <li>Assisted in building a Flask-based learning management system</li>
+                                <li>Developed educational web applications using Django and React</li>
+                                <li>Created interactive tutorials for Python and JavaScript programming</li>
+                                <li>Implemented REST APIs for learning management system</li>
+                                <li>Assisted in building IoT data visualization dashboards</li>
                             </ul>
                         </div>
                     </div>
@@ -221,13 +230,13 @@ def build_solution():
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Featured Projects</h2>
-                    <p class="section-subtitle">My Python development work</p>
+                    <p class="section-subtitle">Cross-domain development work</p>
                 </div>
                 
                 <div class="projects-grid">
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="imx8mp.png" alt="Python-Optimized Embedded Gateway">
+                            <img src="imx8mp.png" alt="Full-Stack IoT Gateway Solution">
                             <div class="project-overlay">
                                 <div class="project-links">
                                     <a href="Optimizing Embedded Gateways with Python on NXP.pdf" class="project-link">
@@ -237,28 +246,26 @@ def build_solution():
                             </div>
                         </div>
                         <div class="project-details">
-                            <h3 class="project-title">Python-Optimized Embedded Gateway on NXP i.MX8M Plus</h3>
+                            <h3 class="project-title">Full-Stack IoT Gateway Solution</h3>
                             <p class="project-description">
-                                Developed a high-performance industrial IoT gateway using Python as the primary automation language, achieving 40% throughput improvement and 99.8% data reliability. Implemented Python-based communication protocols, data persistence, and real-time monitoring on Yocto Linux, reducing development time by 35% compared to traditional embedded approaches.
+                                End-to-end industrial IoT solution combining Python-optimized embedded gateway (NXP i.MX8M Plus) with React.js web dashboard. Achieved 40% throughput improvement on embedded side while handling 10,000+ concurrent connections on web interface. Implemented real-time data pipeline from edge devices to cloud storage with WebSocket streaming.
                             </p>
                             <div class="project-tech">
                                 <span>Python 3</span>
+                                <span>React.js</span>
                                 <span>Yocto Linux</span>
-                                <span>Paho-MQTT</span>
-                                <span>Socket Programming</span>
-                                <span>Data Persistence</span>
-                                <span>System Diagnostics</span>
-                                <span>CLI Tools</span>
-                                <span>Industrial IoT</span>
+                                <span>WebSocket</span>
+                                <span>MQTT</span>
+                                <span>AWS IoT</span>
+                                <span>Docker</span>
                             </div>
                             <div class="project-features">
                                 <ul>
-                                    <li>Developed Python-based TCP socket communication layer with 99.2% packet delivery rate and automatic retry mechanism</li>
-                                    <li>Implemented MQTT integration (paho-mqtt) handling 500+ messages/sec with edge buffering during connectivity drops</li>
-                                    <li>Created dynamic data storage system organizing 10,000+ daily records into day/month/year folders with zero data loss</li>
-                                    <li>Built real-time monitoring system with Python GPIO control (LED indicators) and error handling for 15+ system events</li>
-                                    <li>Developed Python CLI configuration tool reducing DCU setup time from 30 minutes to <2 minutes per device</li>
-                                    <li>Automated protocol testing framework cutting validation time by 60% through Python scripts</li>
+                                    <li>Developed embedded Python communication layer with 99.2% packet delivery rate</li>
+                                    <li>Built React dashboard with real-time charts and device management interface</li>
+                                    <li>Implemented hybrid WebSocket/MQTT protocol for efficient data transmission</li>
+                                    <li>Created Python microservices for data processing and storage optimization</li>
+                                    <li>Designed CI/CD pipeline for simultaneous firmware and web app deployment</li>
                                 </ul>
                             </div>
                         </div>
@@ -266,77 +273,73 @@ def build_solution():
                     
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="ESP32.png" alt="Python-Powered ESP32 IoT System">
+                            <img src="webapp.png" alt="Industrial Monitoring Web Application">
                             <div class="project-overlay">
                                 <div class="project-links">
-                                    <a href="ESP32 WiFi and MQTT.pdf" class="project-link">
-                                        <i class="fas fa-file-alt"></i> Case Study
+                                    <a href="https://github.com/nehapaka13/industrial-monitor" class="project-link">
+                                        <i class="fab fa-github"></i> Code
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="project-details">
-                            <h3 class="project-title">MicroPython IoT Communication System on ESP32</h3>
+                            <h3 class="project-title">Industrial Monitoring Web Application</h3>
                             <p class="project-description">
-                                Developed a robust IoT communication system using MicroPython on ESP32, achieving 99.98% connection uptime and 99.95% MQTT message reliability. Implemented dynamic WiFi switching, persistent MQTT communication, and power optimization in Python, reducing network transition time to just 1.2 seconds while maintaining ultra-low 8.5mA active power consumption.
+                                Full-stack application for real-time monitoring of industrial equipment. Backend developed with FastAPI and Python data processing pipelines, frontend with React and Chart.js for visualization. Supports 500+ concurrent users with sub-second latency for critical alerts.
+                            </p>
+                            <div class="project-tech">
+                                <span>FastAPI</span>
+                                <span>React.js</span>
+                                <span>PostgreSQL</span>
+                                <span>Redis</span>
+                                <span>Docker</span>
+                                <span>OAuth2</span>
+                                <span>WebSocket</span>
+                            </div>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Developed REST API with 50+ endpoints for device management</li>
+                                    <li>Implemented real-time alerting system with WebSocket notifications</li>
+                                    <li>Created custom data visualization components for time-series data</li>
+                                    <li>Built role-based access control with JWT authentication</li>
+                                    <li>Optimized database queries reducing load times by 65%</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="ESP32.png" alt="Smart Agriculture IoT System">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/nehapaka13/smart-agriculture-iot" class="project-link">
+                                        <i class="fab fa-github"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title">Smart Agriculture IoT System</h3>
+                            <p class="project-description">
+                                End-to-end IoT solution for precision agriculture using ESP32 with MicroPython, LoRaWAN connectivity, and cloud data processing. System monitors soil conditions, controls irrigation, and provides predictive analytics through web and mobile interfaces.
                             </p>
                             <div class="project-tech">
                                 <span>MicroPython</span>
                                 <span>ESP32</span>
-                                <span>uMQTT</span>
-                                <span>WiFi Switching</span>
-                                <span>Web Configuration</span>
-                                <span>Power Optimization</span>
-                                <span>uasyncio</span>
-                                <span>IoT</span>
+                                <span>LoRaWAN</span>
+                                <span>Node.js</span>
+                                <span>React Native</span>
+                                <span>TensorFlow Lite</span>
+                                <span>AWS IoT</span>
                             </div>
                             <div class="project-features">
                                 <ul>
-                                    <li>Implemented dynamic WiFi switching with priority-based connection manager achieving 1.2s average switch time</li>
-                                    <li>Developed Python web configuration portal using socket module for WiFi/MQTT setup with JSON persistence</li>
-                                    <li>Built uMQTT client in Python with auto-reconnect, message queuing, and adaptive keep-alive (99.95% reliability)</li>
-                                    <li>Optimized power consumption to 8.5mA active current using Python deep sleep management</li>
-                                    <li>Created memory-efficient Python implementation fitting in 1.2MB firmware with 45KB runtime memory</li>
-                                    <li>Implemented Python-based state machine for seamless network transitions and MQTT session persistence</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="GUI.png" alt="Python-Powered Modem Diagnostics Tool">
-                            <div class="project-overlay">
-                                <div class="project-links">
-                                    <a href="GUI for Advanced Modem Diagnostics.pdf" class="project-link">
-                                        <i class="fas fa-file-alt"></i> Case Study
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-details">
-                            <h3 class="project-title">Advanced Modem Diagnostics Tool with Python</h3>
-                            <p class="project-description">
-                                Developed a professional-grade serial diagnostics application using Python 3.12 and Tkinter, matching commercial tool capabilities while adding enhanced features. The tool provides real-time UART monitoring, multi-format data visualization, and intelligent packet analysis - handling high-speed serial communication with zero data loss.
-                            </p>
-                            <div class="project-tech">
-                                <span>Python 3.12</span>
-                                <span>Tkinter</span>
-                                <span>PySerial</span>
-                                <span>Threading</span>
-                                <span>Data Transformation</span>
-                                <span>Regex Processing</span>
-                                <span>Custom Widgets</span>
-                                <span>Cross-Platform</span>
-                            </div>
-                            <div class="project-features">
-                                <ul>
-                                    <li>Implemented threaded UART monitoring with PySerial handling 115200+ baud rates reliably</li>
-                                    <li>Developed real-time data display in 4 formats (ASCII/HEX/Decimal/Binary) with Python converters</li>
-                                    <li>Created auto-detection for COM ports using Python's serial.tools with dynamic refresh</li>
-                                    <li>Built custom Tkinter widgets with syntax highlighting and color-coded packet status indicators</li>
-                                    <li>Designed modular data transformation pipeline with Python regex filters for protocol analysis</li>
-                                    <li>Implemented persistent settings and theming using Python's json and os modules</li>
+                                    <li>Developed low-power sensor nodes with 6-month battery life</li>
+                                    <li>Implemented edge ML for anomaly detection in soil conditions</li>
+                                    <li>Built cross-platform mobile app for real-time monitoring</li>
+                                    <li>Created predictive irrigation scheduling system</li>
+                                    <li>Designed LPWAN network architecture for rural deployment</li>
                                 </ul>
                             </div>
                         </div>
@@ -350,7 +353,7 @@ def build_solution():
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">So, what's your story?</p>
+                    <p class="section-subtitle">Let's build something amazing together</p>
                 </div>
                 
                 <div class="contact-container">
@@ -370,7 +373,7 @@ def build_solution():
                             <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" placeholder="Typing..." rows="5" required></textarea>
+                            <textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
                         </div>
                         <div id="statusMessage" style="display:none; color: green; margin-bottom: 10px;">Sending message...</div>
                         <button type="submit" class="submit-button">Send Message <i class="fas fa-paper-plane"></i></button>
@@ -400,7 +403,7 @@ def build_solution():
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="copyright">&copy; <span id="year"></span> Neha Paka | All rights reserved</p>
+                <p class="copyright">&copy; <span id="year"></span> Neha Paka | Software Engineer</p>
             </div>
         </div>
     </footer>
