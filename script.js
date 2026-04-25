@@ -368,4 +368,3 @@ if (yearSpan && !yearSpan.textContent) {
 // Console greeting (fun easter egg)
 console.log("%c👩‍💻 Neha Paka | Python Backend Developer | IoT & Embedded Systems", "color: #3b82f6; font-size: 14px; font-weight: bold;");
 console.log("%cLet's build something amazing together! 🚀", "color: #10b981; font-size: 12px;");
->>>>>>> 9081029 (Initial commit)
