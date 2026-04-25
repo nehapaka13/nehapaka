@@ -11,43 +11,73 @@ document.addEventListener("DOMContentLoaded", () => {
     const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
     html.setAttribute('data-theme', initialTheme);
     
+    // Update theme switcher active state if needed
+    updateThemeIcon(initialTheme);
+    
     // Toggle theme on click
-    themeSwitcher.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        html.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
+    if (themeSwitcher) {
+        themeSwitcher.addEventListener('click', (e) => {
+            // Prevent event from bubbling if clicking on icons
+            e.stopPropagation();
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    }
+    
+    function updateThemeIcon(theme) {
+        const sunIcon = themeSwitcher?.querySelector('.fa-sun');
+        const moonIcon = themeSwitcher?.querySelector('.fa-moon');
+        if (sunIcon && moonIcon) {
+            if (theme === 'dark') {
+                sunIcon.style.opacity = '0.5';
+                moonIcon.style.opacity = '1';
+            } else {
+                sunIcon.style.opacity = '1';
+                moonIcon.style.opacity = '0.5';
+            }
+        }
+    }
 
-    // Rest of your existing JavaScript...
-});
-
-// script.js - Embedded Systems Portfolio
-document.addEventListener("DOMContentLoaded", () => {
     // Preloader
     const preloader = document.querySelector('.preloader');
-    window.addEventListener('load', () => {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 500);
-    });
+    if (preloader) {
+        window.addEventListener('load', () => {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    }
 
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navList = document.querySelector('.nav-list');
     
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navList.classList.toggle('active');
-    });
+    if (hamburger && navList) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navList.classList.toggle('active');
+            // Prevent body scroll when menu is open
+            if (navList.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+    }
 
     // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navList.classList.remove('active');
+            if (hamburger && navList) {
+                hamburger.classList.remove('active');
+                navList.classList.remove('active');
+                document.body.style.overflow = '';
+            }
             
             // Update active link
             document.querySelectorAll('.nav-link').forEach(item => {
@@ -80,12 +110,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
+                e.preventDefault();
+                // Close mobile menu if open
+                if (navList && navList.classList.contains('active')) {
+                    hamburger?.classList.remove('active');
+                    navList.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
@@ -97,90 +135,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // Sticky header on scroll
     const header = document.querySelector('.header');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
+        if (header) {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
         }
     });
 
     // Back to top button
     const backToTop = document.querySelector('.back-to-top');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTop.classList.add('active');
-        } else {
-            backToTop.classList.remove('active');
-        }
-    });
-
-    // Project card interactions
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        const projectLink = card.querySelector('.project-link');
-        if (projectLink) {
-            card.addEventListener('click', (e) => {
-                // Only open link if not clicking on the actual link
-                if (!e.target.closest('.project-link') && projectLink.href && projectLink.href !== '#') {
-                    window.open(projectLink.href, '_blank');
-                }
-            });
-
-            // Keyboard accessibility
-            card.setAttribute('tabindex', '0');
-            card.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' && projectLink.href && projectLink.href !== '#') {
-                    window.open(projectLink.href, '_blank');
-                }
-            });
-        }
-    });
-
-    // Project details toggle
-    document.querySelectorAll('.project-link[href^="#"]').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.style.display = targetElement.style.display === 'none' ? 'block' : 'none';
-                
-                // Scroll to the details if showing
-                if (targetElement.style.display === 'block') {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            }
-        });
-    });
-    
-
-    
-
-    // Hardware terminal effect for hero code snippet
-    const hardwareCode = document.querySelector('.hardware-snippet code');
-    if (hardwareCode) {
-        const originalCode = hardwareCode.textContent;
-        hardwareCode.textContent = '';
-        let i = 0;
-        
-        function typeWriter() {
-            if (i < originalCode.length) {
-                hardwareCode.textContent += originalCode.charAt(i);
-                i++;
-                setTimeout(typeWriter, Math.random() * 50);
+        if (backToTop) {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('active');
             } else {
-                // Add blinking cursor
-                hardwareCode.innerHTML += '<span class="blinking-cursor">|</span>';
+                backToTop.classList.remove('active');
             }
         }
-        
-        // Start typing effect after 1 second
-        setTimeout(typeWriter, 1000);
-    }
+    });
 
     // Animate elements when they come into view
     const animateOnScroll = () => {
@@ -189,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+                    entry.target.classList.add('animate__fadeInUp');
                     observer.unobserve(entry.target);
                 }
             });
@@ -204,75 +178,194 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize animations
     animateOnScroll();
+
+    // Add hardware typing effect (reduced complexity for performance)
+    const hardwareCode = document.querySelector('.hardware-snippet code');
+    if (hardwareCode && !hardwareCode.hasAttribute('data-typed')) {
+        hardwareCode.setAttribute('data-typed', 'true');
+        // Don't do full typing effect on mobile for performance
+        const isMobile = window.innerWidth < 768;
+        if (!isMobile) {
+            const originalText = hardwareCode.textContent;
+            if (originalText && originalText.length > 0) {
+                hardwareCode.textContent = '';
+                let i = 0;
+                function typeWriter() {
+                    if (i < originalText.length) {
+                        hardwareCode.textContent += originalText.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, Math.random() * 30 + 10);
+                    }
+                }
+                setTimeout(typeWriter, 500);
+            }
+        }
+    }
 });
 
-// Add blinking cursor styles dynamically
-const style = document.createElement('style');
-style.textContent = `
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.animate__fadeInUp {
-    animation-name: fadeInUp;
+// Add blinking cursor styles dynamically (only if not already added)
+if (!document.querySelector('#dynamic-cursor-styles')) {
+    const style = document.createElement('style');
+    style.id = 'dynamic-cursor-styles';
+    style.textContent = `
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .blinking-cursor {
+            animation: blink 1s step-end infinite;
+            color: var(--secondary);
+        }
+    `;
+    document.head.appendChild(style);
 }
 
-.blinking-cursor {
-    animation: blink 1s step-end infinite;
-    color: var(--secondary-color);
-}
-@keyframes blink {
-    from, to { opacity: 1; }
-    50% { opacity: 0; }
-}
-`;
-document.head.appendChild(style);
-
+// Contact Form Submission with Google Sheets
 let formSubmitted = false;
-
 const form = document.getElementById("contactForm");
 const iframe = document.querySelector('iframe[name="hidden_iframe"]');
+const statusMessage = document.getElementById("statusMessage");
 
-form.addEventListener('submit', () => {
-  formSubmitted = true;
-  statusMessage.style.display = "block";
-  form.querySelector('button[type="submit"]').disabled = true;
-});
-
-iframe.addEventListener('load', () => {
-  if (!formSubmitted) return; // Ignore iframe loads before submit
-
-  formSubmitted = false; // reset flag
-
-  form.reset();
-  showToast("Message sent!", "success");
-  statusMessage.style.display = "none";
-  form.querySelector('button[type="submit"]').disabled = false;
-});
-
-
-function showToast(message, type = "success", duration = 3000) {
-  const toast = document.getElementById("toastBubble");
-  
-  toast.textContent = message;
-  toast.className = "";  // reset classes
-  toast.classList.add(type);
-  
-  toast.style.visibility = "visible";
-  toast.style.opacity = "1";
-  toast.style.transform = "translateX(0)";
-
-  // Hide after duration ms
-  setTimeout(() => {
-    toast.style.opacity = "0";
-    toast.style.transform = "translateX(100%)";
-    toast.style.visibility = "hidden";
-  }, duration);
+if (form && iframe) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Basic validation
+        const name = form.querySelector('input[name="name"]')?.value.trim();
+        const email = form.querySelector('input[name="email"]')?.value.trim();
+        const message = form.querySelector('textarea[name="message"]')?.value.trim();
+        
+        if (!name || !email || !message) {
+            showToast("Please fill all fields", "error");
+            return;
+        }
+        
+        if (!email.includes('@') || !email.includes('.')) {
+            showToast("Please enter a valid email address", "error");
+            return;
+        }
+        
+        formSubmitted = true;
+        if (statusMessage) {
+            statusMessage.style.display = "block";
+            statusMessage.textContent = "Sending message...";
+            statusMessage.style.color = "var(--primary)";
+        }
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+        }
+        
+        // Submit the form
+        form.submit();
+    });
+    
+    iframe.addEventListener('load', () => {
+        if (!formSubmitted) return;
+        
+        formSubmitted = false;
+        form.reset();
+        showToast("Message sent successfully! I'll get back to you soon.", "success");
+        
+        if (statusMessage) {
+            statusMessage.style.display = "none";
+        }
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = "Send Message";
+        }
+    });
 }
 
+// Toast notification function
+function showToast(message, type = "success") {
+    const toast = document.getElementById("toastBubble");
+    if (!toast) return;
+    
+    toast.textContent = message;
+    toast.style.backgroundColor = type === "success" ? "var(--secondary)" : "var(--danger)";
+    toast.classList.add("show");
+    
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 4000);
+}
+
+// Handle window resize for mobile menu cleanup
+window.addEventListener('resize', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.nav-list');
+    
+    if (window.innerWidth > 768 && navList && navList.classList.contains('active')) {
+        hamburger?.classList.remove('active');
+        navList.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+});
+
+// Add keyboard accessibility for project cards
+document.addEventListener('DOMContentLoaded', () => {
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.click();
+            }
+        });
+    });
+});
+
+// Prevent scroll chaining on mobile menu
+document.addEventListener('touchmove', function(e) {
+    const navList = document.querySelector('.nav-list');
+    if (navList && navList.classList.contains('active')) {
+        e.preventDefault();
+    }
+}, { passive: false });
+
+// Lazy load any images if needed (optional enhancement)
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
+    if ('loading' in HTMLImageElement.prototype) {
+        images.forEach(img => {
+            img.loading = 'lazy';
+        });
+    }
+});
+
+// Handle theme transition for smooth color changes
+const themeStyle = document.createElement('style');
+themeStyle.textContent = `
+    * {
+        transition: background-color 0.2s ease, border-color 0.2s ease, color 0.15s ease;
+    }
+    
+    .header, .preloader, .project-card, .skill-category, .timeline-content, .contact-info {
+        transition: background-color 0.25s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            transition: none !important;
+            animation: none !important;
+        }
+    }
+`;
+document.head.appendChild(themeStyle);
+
+// Add year to footer (already in HTML but ensure it works)
+const yearSpan = document.getElementById('year');
+if (yearSpan && !yearSpan.textContent) {
+    yearSpan.textContent = new Date().getFullYear();
+}
+
+// Console greeting (fun easter egg)
+console.log("%c👩‍💻 Neha Paka | Python Backend Developer | IoT & Embedded Systems", "color: #3b82f6; font-size: 14px; font-weight: bold;");
+console.log("%cLet's build something amazing together! 🚀", "color: #10b981; font-size: 12px;");
+>>>>>>> 9081029 (Initial commit)
